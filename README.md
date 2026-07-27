@@ -76,8 +76,7 @@ index=botsv1 sourcetype=stream:http
 ```
 **Purpose:** Display all HTTP traffic available in the dataset.
 
-![HTTP traffic overview](screenshots/01-http-traffic-overview.png)
-![First screenshot](screenshots/firstever%20screenshot.png)
+![Dataset overview by sourcetype](screenshots/firstever_screenshot.png)
 
 ### Identify Most Active Source IP
 ```spl
@@ -138,6 +137,8 @@ index=botsv1 source="stream:http" src_ip="40.80.148.42"
 **Purpose:** Identify tools or browsers used during the attack.
 
 **Finding:** Mostly common browser User-Agent strings were observed, with several unusual one-off User-Agent values that may indicate automated scanning or testing tools.
+
+![User-Agent analysis](screenshots/07-user-agent-analysis.png)
 
 ### HTTP Status Code Analysis
 ```spl
