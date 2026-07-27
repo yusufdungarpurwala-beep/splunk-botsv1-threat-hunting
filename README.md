@@ -76,6 +76,9 @@ index=botsv1 sourcetype=stream:http
 ```
 **Purpose:** Display all HTTP traffic available in the dataset.
 
+![HTTP traffic overview](screenshots/01-http-traffic-overview.png)
+![First screenshot](screenshots/firstever%20screenshot.png)
+
 ### Identify Most Active Source IP
 ```spl
 index=botsv1 sourcetype=stream:http
@@ -85,6 +88,8 @@ index=botsv1 sourcetype=stream:http
 **Purpose:** Identify which IP address generated the highest volume of HTTP requests.
 
 **Finding:** `40.80.148.42` generated approximately 17,547 HTTP requests.
+
+![Top source IP](screenshots/02-top-source-ip.png)
 
 ### Investigate Attacker Activity
 ```spl
@@ -101,6 +106,8 @@ index=botsv1 sourcetype=stream:http src_ip="40.80.148.42"
 **Purpose:** Identify which application endpoints were targeted most frequently.
 
 **Finding:** Most requested URI: `/joomla/index.php/component/search/`
+
+![Requested resources](screenshots/03-uri-analysis.png)
 
 ### HTTP Method Analysis
 ```spl
@@ -119,6 +126,8 @@ index=botsv1 sourcetype=stream:http src_ip="40.80.148.42"
 | CONNECT | 1 |
 | PROPFIND | 1 |
 | TRACE | 1 |
+
+![HTTP request methods](screenshots/04-http-methods.png)
 
 ### User-Agent Analysis
 ```spl
@@ -153,6 +162,8 @@ index=botsv1 sourcetype=stream:http src_ip="40.80.148.42"
 | 417 | 1 |
 | 501 | 1 |
 
+![HTTP status codes](screenshots/05-status-codes.png)
+
 ### Identify URIs Returning HTTP 500
 ```spl
 index=botsv1 sourcetype=stream:http src_ip="40.80.148.42" status=500
@@ -171,6 +182,8 @@ index=botsv1 sourcetype=stream:http src_ip="40.80.148.42" status=500 http_method
 **Purpose:** Identify when server errors occurred during the attack.
 
 **Finding:** Three noticeable spikes were observed, indicating concentrated periods of attack activity.
+
+![Timeline analysis using timechart](screenshots/06-timeline-500-errors.png)
 
 ### Table View
 ```spl
