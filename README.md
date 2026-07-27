@@ -204,21 +204,6 @@ index=botsv1 sourcetype=stream:http src_ip="40.80.148.42"
 - User-Agent analysis revealed a mixture of standard browser identifiers and less common values that may represent automated reconnaissance or scanning activity.
 - Investigation highlighted the importance of validating log parsing and field extraction before conducting advanced threat hunting.
 
-## Screenshots
-
-Include screenshots for:
-- Splunk Dashboard
-- HTTP Events
-- Top Source IP Query
-- URI Statistics
-- HTTP Method Statistics
-- User-Agent Statistics
-- HTTP Status Codes
-- Timeline Graph
-- HTTP 500 URI Analysis
-- Table View of Requests
-- Sysmon XML showing missing field extraction (optional but recommended)
-
 ## Lessons Learned
 
 This investigation reinforced the importance of following a structured methodology when performing threat hunting. Rather than immediately assuming malicious activity, statistical analysis was used to identify anomalies before investigating individual events.
